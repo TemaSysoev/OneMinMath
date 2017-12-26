@@ -8,7 +8,7 @@
 
 import UIKit
 import Social
-//hello, world!
+
 
 class ViewController: UIViewController {
     @IBOutlet var TrueRight: UISwipeGestureRecognizer!
