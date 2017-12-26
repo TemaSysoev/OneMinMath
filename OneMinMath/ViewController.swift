@@ -11,12 +11,13 @@ import Social
 
 
 class ViewController: UIViewController {
-    @IBOutlet var TrueRight: UISwipeGestureRecognizer!
-    @IBOutlet var FalseLeft: UISwipeGestureRecognizer!
-    @IBOutlet var ShareUp: UISwipeGestureRecognizer!
     @IBOutlet weak var Var1: UILabel!
     @IBOutlet weak var Var2: UILabel!
     @IBOutlet weak var Karma: UILabel!
+    @IBOutlet weak var Share: UIButton!
+    @IBOutlet weak var True: UIButton!
+    @IBOutlet weak var False: UIButton!
+    @IBOutlet weak var Vopros: UILabel!
     var timer = Timer()
     var end = 10
     var karma = 0
@@ -27,22 +28,24 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ShareUp.isEnabled = false
+        Share.isHidden = true
         Var1.text = ("\(a1) - \(b1)")
         Var2.text = ("\(a2) - \(b2)")
         self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
+        
     }
     @objc func update(){
         end = end - 1
         print(end)
         if end <= 0{
             timer.invalidate()
-            TrueRight.isEnabled = false
-            FalseLeft.isEnabled = false
             Var2.isHidden = true
             Var1.isHidden = true
             Karma.text = "Score:\(karma)"
-            ShareUp.isEnabled = true
+            False.isHidden = true
+            True.isHidden = true
+            Share.isHidden = false
+            Vopros.isHidden = true
         }
     }
     func updateText(){
