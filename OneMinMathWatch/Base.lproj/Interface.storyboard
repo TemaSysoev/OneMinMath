@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="OneMinMathWatch" customModuleProvider="target">
+                    <items>
+                        <label width="90" height="25" alignment="left" text="500-500 " id="NUF-vh-VeU">
+                            <fontDescription key="font" type="boldSystem" pointSize="16"/>
+                        </label>
+                        <label alignment="left" text="more than" id="sQr-9e-cXe">
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="system" weight="medium" pointSize="12"/>
+                        </label>
+                        <label width="90" height="25" alignment="left" text="500-500" id="TlU-Ae-VTq">
+                            <fontDescription key="font" type="boldSystem" pointSize="16"/>
+                        </label>
+                        <button width="136" height="30" alignment="left" title="True" id="H3P-Xy-QCO">
+                            <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="TrueAction" destination="AgC-eL-Hgc" id="n5q-NX-Xrf"/>
+                            </connections>
+                        </button>
+                        <button width="136" height="30" alignment="left" title="False" id="kyw-jh-907">
+                            <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="FalseAction" destination="AgC-eL-Hgc" id="umd-sE-sdu"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Restart" id="gJg-TZ-iew">
+                            <connections>
+                                <segue destination="AgC-eL-Hgc" kind="push" id="gNL-02-07n"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="False" destination="kyw-jh-907" id="9CX-Y0-23g"/>
+                        <outlet property="True" destination="H3P-Xy-QCO" id="hYo-Pe-gVl"/>
+                        <outlet property="Var1" destination="NUF-vh-VeU" id="2xs-Fh-G5g"/>
+                        <outlet property="Var2" destination="TlU-Ae-VTq" id="D3c-A2-9rh"/>
+                        <outlet property="moreThan" destination="sQr-9e-cXe" id="pJu-WH-rZW"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+    </scenes>
+</document>
