@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var False: UIButton!
     @IBOutlet weak var Vopros: UILabel!
     var timer = Timer()
-    var end = 10
+    var end = 60
     var karma = 0
     var a1 = Int(arc4random_uniform(500))
     var b1 = Int(arc4random_uniform(500))

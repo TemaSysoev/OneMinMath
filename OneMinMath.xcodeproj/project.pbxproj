@@ -10,6 +10,7 @@
 		A35CA4A11FF242D70060D4B6 /* true.png in Resources */ = {isa = PBXBuildFile; fileRef = A35CA4A01FF242D60060D4B6 /* true.png */; };
 		A35CA4A31FF242DE0060D4B6 /* false.png in Resources */ = {isa = PBXBuildFile; fileRef = A35CA4A21FF242DE0060D4B6 /* false.png */; };
 		A35CA4A51FF2453B0060D4B6 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = A35CA4A41FF2453B0060D4B6 /* share.png */; };
+		A3D089641FF281C70030E406 /* iOS in Resources */ = {isa = PBXBuildFile; fileRef = A3D089631FF281C70030E406 /* iOS */; };
 		E0FEEBA51FEFFE63002E6DB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FEEBA41FEFFE63002E6DB2 /* AppDelegate.swift */; };
 		E0FEEBA71FEFFE63002E6DB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FEEBA61FEFFE63002E6DB2 /* ViewController.swift */; };
 		E0FEEBAA1FEFFE63002E6DB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0FEEBA81FEFFE63002E6DB2 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 		A35CA4A01FF242D60060D4B6 /* true.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = true.png; sourceTree = SOURCE_ROOT; };
 		A35CA4A21FF242DE0060D4B6 /* false.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = false.png; sourceTree = SOURCE_ROOT; };
 		A35CA4A41FF2453B0060D4B6 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = SOURCE_ROOT; };
+		A3D089631FF281C70030E406 /* iOS */ = {isa = PBXFileReference; lastKnownFileType = folder; path = iOS; sourceTree = SOURCE_ROOT; };
 		E0FEEBA11FEFFE63002E6DB2 /* OneMinMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneMinMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0FEEBA41FEFFE63002E6DB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0FEEBA61FEFFE63002E6DB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				E0FEEBA61FEFFE63002E6DB2 /* ViewController.swift */,
 				E0FEEBA81FEFFE63002E6DB2 /* Main.storyboard */,
 				E0FEEBAE1FEFFE63002E6DB2 /* Assets.xcassets */,
+				A3D089631FF281C70030E406 /* iOS */,
 				A35CA4A01FF242D60060D4B6 /* true.png */,
 				A35CA4A21FF242DE0060D4B6 /* false.png */,
 				A35CA4A41FF2453B0060D4B6 /* share.png */,
@@ -249,6 +252,7 @@
 				E0FEEBAF1FEFFE63002E6DB2 /* Assets.xcassets in Resources */,
 				E0FEEBAA1FEFFE63002E6DB2 /* Main.storyboard in Resources */,
 				A35CA4A11FF242D70060D4B6 /* true.png in Resources */,
+				A3D089641FF281C70030E406 /* iOS in Resources */,
 				A35CA4A31FF242DE0060D4B6 /* false.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
