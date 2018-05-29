@@ -8,7 +8,7 @@
 
 import UIKit
 import Social
-
+import AudioToolbox
 
 class ViewController: UIViewController {
     @IBOutlet weak var Var1: UILabel!
@@ -19,12 +19,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var False: UIButton!
     @IBOutlet weak var Vopros: UILabel!
     var timer = Timer()
-    var end = 60
+    var end = 8
     var karma = 0
     var a1 = Int(arc4random_uniform(500))
     var b1 = Int(arc4random_uniform(500))
     var a2 = Int(arc4random_uniform(500))
     var b2 = Int(arc4random_uniform(500))
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,16 +33,57 @@ class ViewController: UIViewController {
         Var1.text = ("\(a1) - \(b1)")
         Var2.text = ("\(a2) - \(b2)")
         self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
+        Var2.isHidden = true
+        Var1.isHidden = true
+        Vopros.text = ""
+        Karma.text = ""
         
     }
     @objc func update(){
         end = end - 1
         print(end)
+        
+        if end >= 7{
+            
+            Var2.isHidden = true
+            Var1.isHidden = false
+            Vopros.text = ""
+            Karma.text = ""
+        }
+        if end == 6{
+            Var2.isHidden = true
+            Var1.isHidden = true
+            Vopros.text = ""
+            Karma.text = ">"
+        }
+        if end == 5{
+            Var2.isHidden = false
+            Var1.isHidden = true
+            Vopros.text = ""
+            Karma.text = ""
+        }
+        if end == 4{
+            Var2.isHidden = true
+            Var1.isHidden = true
+            Vopros.text = "?"
+            Karma.text = ""
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+        }
+        if end == 3 {
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+        }
+        if end == 2 {
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+           
+        }
+        if end == 1 {
+            AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+        }
         if end <= 0{
             timer.invalidate()
             Var2.isHidden = true
             Var1.isHidden = true
-            Karma.text = "Score:\(karma)"
+            Karma.text = "\(karma)"
             False.isHidden = true
             True.isHidden = true
             Share.isHidden = false
@@ -59,6 +101,7 @@ class ViewController: UIViewController {
         b2 = Int(arc4random_uniform(500))
     }
     @IBAction func True(_ sender: Any) {
+        end = 8
         if a1-b1 > a2-b2{
             karma = karma + 1
             print(karma)
@@ -71,6 +114,7 @@ class ViewController: UIViewController {
         updateText()
     }
     @IBAction func False(_ sender: Any) {
+        end = 8
         if a1-b1 > a2-b2{
             karma = karma - 1
             print(karma)
